@@ -81,6 +81,73 @@
   --color-error-950: #450a0a;
 }
 
+/* Animação customizada de pulso que para após algumas repetições */
+@keyframes pulse-size {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+.animate-pulse-size {
+  animation: pulse-size 2s ease-in-out 3;
+}
+
+/* Efeito de carregamento simples */
+@keyframes logo-loading {
+  0% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.3;
+  }
+}
+
+.logo-loading {
+  animation: logo-loading 2s ease-in-out infinite;
+}
+
+/* Efeitos 3D */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+@keyframes logo-enter {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.logo-enter {
+  animation: logo-enter 1.2s ease-out forwards;
+}
+
+@keyframes logo-exit {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.1);
+    opacity: 0;
+  }
+}
+
+.logo-exit {
+  animation: logo-exit 1.2s ease-in forwards;
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
