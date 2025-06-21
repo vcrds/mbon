@@ -3,7 +3,11 @@
 import Image from "next/image";
 import { useState, useEffect } from "react";
 
-export default function HeaderInitial() {
+interface HeaderInitialProps {
+  onLoadComplete?: () => void;
+}
+
+export default function HeaderInitial({ onLoadComplete }: HeaderInitialProps) {
   const [currentMessageIndex, setCurrentMessageIndex] = useState(0);
   const [displayText, setDisplayText] = useState("");
   const [isLoading, setIsLoading] = useState(true);
@@ -32,7 +36,8 @@ export default function HeaderInitial() {
     // Finaliza o carregamento
     const endTimer = setTimeout(() => {
       setIsLoading(false);
-    }, 3500);
+      onLoadComplete?.();
+    }, 4000); // Aumentado para dar mais tempo para a transição
 
     return () => {
       clearTimeout(logoTimer);
@@ -79,16 +84,16 @@ export default function HeaderInitial() {
   if (isLoading) {
     return (
       <div
-        className={`fixed inset-0 bg-gradient-to-br from-[var(--color-primary-950)] via-[var(--color-primary-900)] to-[var(--color-primary-800)] flex items-center justify-center z-50 transition-all duration-1500 ease-in-out ${
-          isExiting ? "opacity-0" : "opacity-100"
+        className={`fixed inset-0 bg-gradient-to-br from-[var(--color-primary-950)] via-[var(--color-primary-900)] to-[var(--color-primary-800)] flex items-center justify-center z-50 transition-all duration-2000 ease-in-out ${
+          isExiting ? "opacity-0 scale-95" : "opacity-100 scale-100"
         }`}
       >
         <div className="flex flex-col items-center px-4">
           {/* Logo com animação SVG */}
           <div>
             <div
-              className={`logo-loading logo-enter ${
-                isExiting ? "logo-exit" : ""
+              className={`logo-loading logo-enter transition-all duration-2000 ease-in-out ${
+                isExiting ? "logo-exit scale-110" : "scale-100"
               }`}
             >
               <Image
@@ -106,9 +111,13 @@ export default function HeaderInitial() {
   }
 
   return (
-    <header className="flex items-center justify-center min-h-screen px-4 sm:px-6 md:px-8">
+    <header
+      className={`flex items-center justify-center min-h-screen px-4 sm:px-6 md:px-8 transition-all duration-1500 ease-in-out ${
+        isLoading ? "opacity-0 scale-95" : "opacity-100 scale-100"
+      }`}
+    >
       <div className="flex flex-col gap-4 sm:gap-6 md:gap-8 max-w-7xl w-full">
-        <div className="flex justify-center items-center">
+        <div className="flex justify-center">
           <Image
             src="ministerioBoasNovas.svg"
             width={400}
@@ -123,7 +132,7 @@ export default function HeaderInitial() {
             <h1 className="text-[var(--color-primary-50)] text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold">
               Ministério Boas Novas
             </h1>
-            <div className="font-bold min-h-[4rem] sm:min-h-[2rem] flex items-center">
+            <div className="font-bold min-h-[4rem] sm:min-h-[2rem] flex items-center justify-start">
               <div className="text-lg md:text-xl lg:text-2xl flex flex-col sm:flex-row items-start sm:items-center gap-1 sm:gap-1.5">
                 <span className="text-[var(--color-primary-500)]">
                   Seja bem-vindo
