@@ -11,7 +11,7 @@ export default function HeaderInitial() {
   const [isExiting, setIsExiting] = useState(false);
 
   const welcomeMessages = [
-    "a nossa igreja!",
+    "à nossa comunidade de fé",
     "a casa de Deus!",
     "a sua casa!",
     "à família de Deus!",
