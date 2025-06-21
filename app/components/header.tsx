@@ -83,7 +83,7 @@ export default function HeaderInitial() {
           isExiting ? "opacity-0" : "opacity-100"
         }`}
       >
-        <div className="flex flex-col items-center">
+        <div className="flex flex-col items-center px-4">
           {/* Logo com animação SVG */}
           <div>
             <div
@@ -96,7 +96,7 @@ export default function HeaderInitial() {
                 width={280}
                 height={268}
                 alt="Logo Ministério Boas Novas Curitiba"
-                className="drop-shadow-2xl"
+                className="drop-shadow-2xl w-[200px] h-[191px] sm:w-[240px] sm:h-[229px] md:w-[280px] md:h-[268px]"
               />
             </div>
           </div>
@@ -106,29 +106,34 @@ export default function HeaderInitial() {
   }
 
   return (
-    <header className="flex items-center justify-center h-screen max-w-7xl mx-6 max-sm:mx-2">
-      <div className="flex flex-col gap-4">
-        <Image
-          src="ministerioBoasNovas.svg"
-          width={400}
-          height={382}
-          alt="Logo Ministério Boas Novas Curitiba"
-        />
+    <header className="flex items-center justify-center min-h-screen px-4 sm:px-6 md:px-8">
+      <div className="flex flex-col gap-4 sm:gap-6 md:gap-8 max-w-7xl w-full">
+        <div className="flex justify-start">
+          <Image
+            src="ministerioBoasNovas.svg"
+            width={400}
+            height={382}
+            alt="Logo Ministério Boas Novas Curitiba"
+            className="w-[250px] h-[239px] sm:w-[300px] sm:h-[287px] md:w-[350px] md:h-[335px] lg:w-[400px] lg:h-[382px] drop-shadow-2xl"
+          />
+        </div>
 
-        <div className="flex flex-col gap-2 min-w-[435px]">
-          <h1 className="text-[var(--color-primary-50)] text-4xl font-bold">
+        <div className="flex flex-col gap-2 sm:gap-3 text-left">
+          <h1 className="text-[var(--color-primary-50)] text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold">
             Ministério Boas Novas
           </h1>
-          <div className="text-2xl font-bold">
-            <span className="text-[var(--color-primary-500)]">
-              Seja bem-vindo{" "}
-            </span>
-            <span className="text-[var(--color-primary-300)] transition-all duration-300">
-              {displayText}
-            </span>
-            <span className="text-[var(--color-primary-500)] animate-pulse">
-              |
-            </span>
+          <div className="font-bold min-h-[4rem] sm:min-h-[2rem] flex items-center justify-start px-2">
+            <div className="text-base sm:text-lg md:text-xl lg:text-2xl flex flex-col sm:flex-row items-start text-left gap-1 sm:gap-1.5">
+              <span className="text-[var(--color-primary-500)]">
+                Seja bem-vindo
+              </span>
+              <div className="text-[var(--color-primary-300)] transition-all duration-300 flex items-center">
+                <span>{displayText}</span>
+                <span className="text-[var(--color-primary-500)] animate-pulse ml-1">
+                  |
+                </span>
+              </div>
+            </div>
           </div>
         </div>
       </div>

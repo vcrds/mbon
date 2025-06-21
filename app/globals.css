@@ -148,6 +148,35 @@
   animation: logo-exit 1.2s ease-in forwards;
 }
 
+/* Responsividade para animações */
+@media (max-width: 640px) {
+  .logo-loading {
+    animation-duration: 1.5s;
+  }
+
+  .logo-enter {
+    animation-duration: 1s;
+  }
+
+  .logo-exit {
+    animation-duration: 1s;
+  }
+}
+
+@media (min-width: 1024px) {
+  .logo-loading {
+    animation-duration: 2.5s;
+  }
+
+  .logo-enter {
+    animation-duration: 1.5s;
+  }
+
+  .logo-exit {
+    animation-duration: 1.5s;
+  }
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
