@@ -108,7 +108,7 @@ export default function HeaderInitial() {
   return (
     <header className="flex items-center justify-center min-h-screen px-4 sm:px-6 md:px-8">
       <div className="flex flex-col gap-4 sm:gap-6 md:gap-8 max-w-7xl w-full">
-        <div className="flex justify-start">
+        <div className="flex justify-center items-center">
           <Image
             src="ministerioBoasNovas.svg"
             width={400}
@@ -118,20 +118,22 @@ export default function HeaderInitial() {
           />
         </div>
 
-        <div className="flex flex-col gap-2 sm:gap-3 text-left">
-          <h1 className="text-[var(--color-primary-50)] text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold">
-            Ministério Boas Novas
-          </h1>
-          <div className="font-bold min-h-[4rem] sm:min-h-[2rem] flex items-center justify-start px-2">
-            <div className="text-base sm:text-lg md:text-xl lg:text-2xl flex flex-col sm:flex-row items-start text-left gap-1 sm:gap-1.5">
-              <span className="text-[var(--color-primary-500)]">
-                Seja bem-vindo
-              </span>
-              <div className="text-[var(--color-primary-300)] transition-all duration-300 flex items-center">
-                <span>{displayText}</span>
-                <span className="text-[var(--color-primary-500)] animate-pulse ml-1">
-                  |
+        <div className="flex justify-center">
+          <div className="flex flex-col gap-2 sm:gap-3 text-left">
+            <h1 className="text-[var(--color-primary-50)] text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold">
+              Ministério Boas Novas
+            </h1>
+            <div className="font-bold min-h-[4rem] sm:min-h-[2rem] flex items-center">
+              <div className="text-lg md:text-xl lg:text-2xl flex flex-col sm:flex-row items-start sm:items-center gap-1 sm:gap-1.5">
+                <span className="text-[var(--color-primary-500)]">
+                  Seja bem-vindo
                 </span>
+                <div className="text-[var(--color-primary-300)] transition-all duration-300 flex items-center">
+                  <span>{displayText}</span>
+                  <span className="text-[var(--color-primary-500)] animate-pulse ml-1">
+                    |
+                  </span>
+                </div>
               </div>
             </div>
           </div>
