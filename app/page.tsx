@@ -2,6 +2,7 @@
 
 import HeaderInitial from "./components/header";
 import Schedule from "./components/schedule";
+import Location from "./components/location";
 import { useState } from "react";
 
 export default function Home() {
@@ -10,7 +11,12 @@ export default function Home() {
   return (
     <div className="transition-all duration-1000 ease-in-out">
       <HeaderInitial onLoadComplete={() => setIsHeaderLoaded(true)} />
-      {isHeaderLoaded && <Schedule />}
+      {isHeaderLoaded && (
+        <>
+          <Schedule />
+          <Location />
+        </>
+      )}
     </div>
   );
 }
