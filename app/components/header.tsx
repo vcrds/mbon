@@ -117,17 +117,17 @@ export default function HeaderInitial({ onLoadComplete }: HeaderInitialProps) {
       }`}
     >
       <div className="flex flex-col gap-4 sm:gap-6 md:gap-8 max-w-7xl w-full">
-        <div className="flex justify-center">
+        <div className="flex justify-center animate-scale-in animate-delay-300">
           <Image
             src="ministerioBoasNovas.svg"
             width={400}
             height={382}
             alt="Logo Ministério Boas Novas Curitiba"
-            className="w-[250px] h-[239px] sm:w-[300px] sm:h-[287px] md:w-[350px] md:h-[335px] lg:w-[400px] lg:h-[382px] drop-shadow-2xl"
+            className="w-[250px] h-[239px] sm:w-[300px] sm:h-[287px] md:w-[350px] md:h-[335px] lg:w-[400px] lg:h-[382px] drop-shadow-2xl hover-scale"
           />
         </div>
 
-        <div className="flex justify-center">
+        <div className="flex justify-center animate-fade-in-up animate-delay-500">
           <div className="flex flex-col gap-2 sm:gap-3 text-left">
             <h1 className="text-[var(--color-primary-50)] text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold">
               Ministério Boas Novas
@@ -139,7 +139,7 @@ export default function HeaderInitial({ onLoadComplete }: HeaderInitialProps) {
                 </span>
                 <div className="text-[var(--color-primary-300)] transition-all duration-300 flex items-center">
                   <span>{displayText}</span>
-                  <span className="text-[var(--color-primary-500)] animate-pulse ml-1">
+                  <span className="text-[var(--color-primary-500)] animate-pulse ml-1 transition-opacity duration-300">
                     |
                   </span>
                 </div>

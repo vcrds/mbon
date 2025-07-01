@@ -1,3 +1,6 @@
+import AnimatedSection from "./AnimatedSection";
+import { StaggeredContainer } from "./AnimatedSection";
+
 export default function Location() {
   const handleOpenMaps = () => {
     const googleMapsUrl =
@@ -8,17 +11,24 @@ export default function Location() {
   return (
     <div className="min-h-[500px] w-full flex flex-col items-center justify-center px-4 sm:px-6 md:px-8 py-16">
       {/* Título Principal */}
-      <div className="text-center mb-16">
-        <h1 className="text-[var(--color-primary-50)] text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
-          Nossa Localização
-        </h1>
-        <div className="w-16 h-0.5 bg-[var(--color-primary-500)] mx-auto rounded-full"></div>
-      </div>
+      <AnimatedSection animation="fadeInDown" delay={0.2}>
+        <div className="text-center mb-16">
+          <h1 className="text-[var(--color-primary-50)] text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
+            Nossa Localização
+          </h1>
+          <div className="w-16 h-0.5 bg-[var(--color-primary-500)] mx-auto rounded-full"></div>
+        </div>
+      </AnimatedSection>
 
       {/* Container das Informações */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 w-full max-w-6xl">
+      <StaggeredContainer
+        itemCount={2}
+        animation="fadeInUp"
+        staggerDelay={300}
+        className="grid grid-cols-1 lg:grid-cols-2 gap-8 w-full max-w-6xl"
+      >
         {/* Informações de Contato */}
-        <div className="bg-gradient-to-br from-[var(--color-primary-800)] to-[var(--color-primary-900)] rounded-xl p-6 sm:p-8 border border-[var(--color-primary-700)] hover:border-[var(--color-primary-500)] transition-all duration-300 shadow-lg">
+        <div className="bg-gradient-to-br from-[var(--color-primary-800)] to-[var(--color-primary-900)] rounded-xl p-6 sm:p-8 border border-[var(--color-primary-700)] hover:border-[var(--color-primary-500)] transition-all duration-300 shadow-lg hover-lift">
           <div className="text-center mb-6 sm:mb-8">
             <h2 className="text-[var(--color-primary-100)] text-xl sm:text-2xl font-semibold mb-3">
               Informações de Contato
@@ -47,7 +57,7 @@ export default function Location() {
                   Endereço
                 </h3>
                 <p className="text-[var(--color-primary-50)] text-sm leading-relaxed">
-                  Rua Arnoldo Wolff Gaensly
+                  Rua Arnoldo Wolff Gaensly, 471
                   <br />
                   Atuba, Curitiba - PR,
                   <br />
@@ -131,7 +141,7 @@ export default function Location() {
         </div>
 
         {/* Mapa */}
-        <div className="bg-gradient-to-br from-[var(--color-primary-800)] to-[var(--color-primary-900)] rounded-xl p-6 sm:p-8 border border-[var(--color-primary-700)] hover:border-[var(--color-primary-500)] transition-all duration-300 shadow-lg">
+        <div className="bg-gradient-to-br from-[var(--color-primary-800)] to-[var(--color-primary-900)] rounded-xl p-6 sm:p-8 border border-[var(--color-primary-700)] hover:border-[var(--color-primary-500)] transition-all duration-300 shadow-lg hover-lift">
           <div className="text-center mb-6 sm:mb-8">
             <h2 className="text-[var(--color-primary-100)] text-xl sm:text-2xl font-semibold mb-3">
               Como Chegar
@@ -168,7 +178,7 @@ export default function Location() {
           </div>
 
           {/* Botão de Navegação */}
-          {/* <div className="mt-6 text-center">
+          {/* <div className="mt-6 text-center"></div>
             <button
               onClick={handleOpenMaps}
               className="bg-[var(--color-primary-600)] hover:bg-[var(--color-primary-500)] text-[var(--color-primary-50)] px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:scale-105 shadow-lg"
@@ -177,7 +187,7 @@ export default function Location() {
             </button>
           </div> */}
         </div>
-      </div>
+      </StaggeredContainer>
     </div>
   );
 }

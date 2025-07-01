@@ -1,18 +1,28 @@
+import AnimatedSection from "./AnimatedSection";
+import { StaggeredContainer } from "./AnimatedSection";
+
 export default function Schedule() {
   return (
     <div className="min-h-[500px] w-full flex flex-col items-center justify-center px-4 sm:px-6 md:px-8 py-16">
       {/* Título Principal */}
-      <div className="text-center mb-16">
-        <h1 className="text-[var(--color-primary-50)] text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
-          Programação Semanal
-        </h1>
-        <div className="w-16 h-0.5 bg-[var(--color-primary-500)] mx-auto rounded-full"></div>
-      </div>
+      <AnimatedSection animation="fadeInDown" delay={0.2}>
+        <div className="text-center mb-16">
+          <h1 className="text-[var(--color-primary-50)] text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
+            Programação Semanal
+          </h1>
+          <div className="w-16 h-0.5 bg-[var(--color-primary-500)] mx-auto rounded-full"></div>
+        </div>
+      </AnimatedSection>
 
       {/* Container dos Dias */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 w-full max-w-6xl">
+      <StaggeredContainer
+        itemCount={4}
+        animation="fadeInUp"
+        staggerDelay={200}
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 w-full max-w-6xl"
+      >
         {/* Segunda-feira */}
-        <div className="bg-gradient-to-br from-[var(--color-primary-800)] to-[var(--color-primary-900)] rounded-xl p-4 sm:p-6 border border-[var(--color-primary-700)] hover:border-[var(--color-primary-500)] transition-all duration-300 shadow-lg">
+        <div className="bg-gradient-to-br from-[var(--color-primary-800)] to-[var(--color-primary-900)] rounded-xl p-4 sm:p-6 border border-[var(--color-primary-700)] hover:border-[var(--color-primary-500)] transition-all duration-300 shadow-lg hover-lift">
           <div className="text-center mb-4 sm:mb-6">
             <h2 className="text-[var(--color-primary-100)] text-lg sm:text-xl font-semibold mb-2">
               Segunda-feira
@@ -33,7 +43,7 @@ export default function Schedule() {
         </div>
 
         {/* Terça-feira */}
-        <div className="bg-gradient-to-br from-[var(--color-primary-800)] to-[var(--color-primary-900)] rounded-xl p-4 sm:p-6 border border-[var(--color-primary-700)] hover:border-[var(--color-primary-500)] transition-all duration-300 shadow-lg">
+        <div className="bg-gradient-to-br from-[var(--color-primary-800)] to-[var(--color-primary-900)] rounded-xl p-4 sm:p-6 border border-[var(--color-primary-700)] hover:border-[var(--color-primary-500)] transition-all duration-300 shadow-lg hover-lift">
           <div className="text-center mb-4 sm:mb-6">
             <h2 className="text-[var(--color-primary-100)] text-lg sm:text-xl font-semibold mb-2">
               Terça-feira
@@ -54,7 +64,7 @@ export default function Schedule() {
         </div>
 
         {/* Quarta-feira */}
-        <div className="bg-gradient-to-br from-[var(--color-primary-800)] to-[var(--color-primary-900)] rounded-xl p-4 sm:p-6 border border-[var(--color-primary-700)] hover:border-[var(--color-primary-500)] transition-all duration-300 shadow-lg">
+        <div className="bg-gradient-to-br from-[var(--color-primary-800)] to-[var(--color-primary-900)] rounded-xl p-4 sm:p-6 border border-[var(--color-primary-700)] hover:border-[var(--color-primary-500)] transition-all duration-300 shadow-lg hover-lift">
           <div className="text-center mb-4 sm:mb-6">
             <h2 className="text-[var(--color-primary-100)] text-lg sm:text-xl font-semibold mb-2">
               Quarta-feira
@@ -92,7 +102,7 @@ export default function Schedule() {
         </div>
 
         {/* Domingo */}
-        <div className="bg-gradient-to-br from-[var(--color-primary-800)] to-[var(--color-primary-900)] rounded-xl p-4 sm:p-6 border border-[var(--color-primary-500)] hover:border-[var(--color-primary-300)] transition-all duration-300 shadow-lg">
+        <div className="bg-gradient-to-br from-[var(--color-primary-800)] to-[var(--color-primary-900)] rounded-xl p-4 sm:p-6 border border-[var(--color-primary-500)] hover:border-[var(--color-primary-300)] transition-all duration-300 shadow-lg hover-lift">
           <div className="text-center mb-4 sm:mb-6">
             <h2 className="text-[var(--color-primary-50)] text-lg sm:text-xl font-semibold mb-2">
               Domingo
@@ -111,7 +121,7 @@ export default function Schedule() {
             </div>
           </div>
         </div>
-      </div>
+      </StaggeredContainer>
     </div>
   );
 }
