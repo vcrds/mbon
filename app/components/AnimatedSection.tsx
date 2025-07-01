@@ -55,7 +55,7 @@ export default function AnimatedSection({
       style={{
         opacity: isVisible ? 1 : 0,
         transform: isVisible ? "translateY(0)" : "translateY(30px)",
-        transition: `all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) ${delay}s`,
+        transition: `all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) ${delay}s`,
       }}
     >
       {children}
@@ -111,7 +111,7 @@ export function StaggeredContainer({
             transform: visibleItems.includes(index)
               ? "translateY(0)"
               : "translateY(30px)",
-            transition: `all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) ${
+            transition: `all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) ${
               index * staggerDelay
             }ms`,
           }}

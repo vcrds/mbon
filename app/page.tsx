@@ -3,6 +3,7 @@
 import HeaderInitial from "./components/header";
 import Schedule from "./components/schedule";
 import Location from "./components/location";
+import Footer from "./components/footer";
 import SmoothScroll from "./components/SmoothScroll";
 import ScrollProgress from "./components/ScrollProgress";
 import { useState } from "react";
@@ -14,7 +15,7 @@ export default function Home() {
     <>
       <ScrollProgress />
       <SmoothScroll>
-        <div className="transition-all duration-1000 ease-in-out">
+        <div className="transition-all duration-600 ease-in-out">
           <section id="header">
             <HeaderInitial onLoadComplete={() => setIsHeaderLoaded(true)} />
           </section>
@@ -26,6 +27,7 @@ export default function Home() {
               <section id="location">
                 <Location />
               </section>
+              <Footer />
             </>
           )}
         </div>

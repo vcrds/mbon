@@ -13,6 +13,7 @@ export default function HeaderInitial({ onLoadComplete }: HeaderInitialProps) {
   const [isLoading, setIsLoading] = useState(true);
   const [logoOpacity, setLogoOpacity] = useState(0);
   const [isExiting, setIsExiting] = useState(false);
+  const [animationsStarted, setAnimationsStarted] = useState(false);
 
   const welcomeMessages = [
     "à nossa comunidade de fé",
@@ -26,25 +27,27 @@ export default function HeaderInitial({ onLoadComplete }: HeaderInitialProps) {
     // Logo aparece gradualmente
     const logoTimer = setTimeout(() => {
       setLogoOpacity(1);
-    }, 800);
+    }, 400);
 
     // Inicia a saída
     const exitTimer = setTimeout(() => {
       setIsExiting(true);
-    }, 2500);
+    }, 1500);
 
     // Finaliza o carregamento
     const endTimer = setTimeout(() => {
       setIsLoading(false);
       onLoadComplete?.();
-    }, 4000); // Aumentado para dar mais tempo para a transição
+      // Inicia as animações do header imediatamente
+      setAnimationsStarted(true);
+    }, 2200);
 
     return () => {
       clearTimeout(logoTimer);
       clearTimeout(exitTimer);
       clearTimeout(endTimer);
     };
-  }, []);
+  }, [onLoadComplete]);
 
   // Efeito de digitação
   useEffect(() => {
@@ -112,12 +115,18 @@ export default function HeaderInitial({ onLoadComplete }: HeaderInitialProps) {
 
   return (
     <header
-      className={`flex items-center justify-center min-h-screen px-4 sm:px-6 md:px-8 transition-all duration-1500 ease-in-out ${
+      className={`flex items-center justify-center min-h-screen px-4 sm:px-6 md:px-8 transition-all duration-1000 ease-in-out ${
         isLoading ? "opacity-0 scale-95" : "opacity-100 scale-100"
       }`}
     >
       <div className="flex flex-col gap-4 sm:gap-6 md:gap-8 max-w-7xl w-full">
-        <div className="flex justify-center animate-scale-in animate-delay-300">
+        <div
+          className={`flex justify-center transition-all duration-500 ${
+            animationsStarted
+              ? "animate-scale-in opacity-100 scale-100"
+              : "opacity-0 scale-90"
+          }`}
+        >
           <Image
             src="ministerioBoasNovas.svg"
             width={400}
@@ -127,7 +136,13 @@ export default function HeaderInitial({ onLoadComplete }: HeaderInitialProps) {
           />
         </div>
 
-        <div className="flex justify-center animate-fade-in-up animate-delay-500">
+        <div
+          className={`flex justify-center transition-all duration-500 ${
+            animationsStarted
+              ? "animate-fade-in-up opacity-100 translate-y-0"
+              : "opacity-0 translate-y-10"
+          }`}
+        >
           <div className="flex flex-col gap-2 sm:gap-3 text-left">
             <h1 className="text-[var(--color-primary-50)] text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold">
               Ministério Boas Novas

@@ -5,7 +5,7 @@ export default function Schedule() {
   return (
     <div className="min-h-[500px] w-full flex flex-col items-center justify-center px-4 sm:px-6 md:px-8 py-16">
       {/* Título Principal */}
-      <AnimatedSection animation="fadeInDown" delay={0.2}>
+      <AnimatedSection animation="fadeInDown" delay={0.1}>
         <div className="text-center mb-16">
           <h1 className="text-[var(--color-primary-50)] text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
             Programação Semanal
@@ -18,7 +18,7 @@ export default function Schedule() {
       <StaggeredContainer
         itemCount={4}
         animation="fadeInUp"
-        staggerDelay={200}
+        staggerDelay={100}
         className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 w-full max-w-6xl"
       >
         {/* Segunda-feira */}

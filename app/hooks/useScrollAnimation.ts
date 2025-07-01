@@ -73,7 +73,7 @@ export function useStaggeredAnimation(
           for (let i = 0; i < count; i++) {
             setTimeout(() => {
               setVisibleItems((prev) => [...prev, i]);
-            }, i * 150); // 150ms de delay entre cada item
+            }, i * 100); // 100ms de delay entre cada item
           }
 
           if (triggerOnce) {
