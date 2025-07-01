@@ -87,7 +87,9 @@ Substituir os placeholders nos dados estruturados:
 
 - Telefone: `+55-41-XXXX-XXXX`
 - Email: `contato@ministerioboasnovas.com.br`
-- Redes sociais: URLs das redes sociais
+- Instagram: `@ministerioMBON` ✅ (ativo)
+- ~~Facebook~~: `ministerioboasnovas` (comentado)
+- ~~YouTube~~: `@ministerioboasnovas` (comentado)
 
 ### 4. **Atualizar Códigos de Verificação**
 
@@ -135,5 +137,8 @@ Atualizar as datas no `sitemap.xml` conforme necessário.
 - ✅ `public/sitemap.xml` - Mapa do site
 - ✅ `app/components/GoogleAnalytics.tsx` - Analytics
 - ✅ `app/components/StructuredData.tsx` - Dados estruturados JSON-LD
+- ✅ `app/components/SocialMedia.tsx` - Componente de redes sociais
+- ✅ `app/components/SocialSection.tsx` - Seção dedicada para redes sociais
+- ✅ `app/components/footer.tsx` - Footer atualizado com redes sociais
 - ✅ `app/components/index.ts` - Exportações
 - ✅ `METADADOS.md` - Esta documentação

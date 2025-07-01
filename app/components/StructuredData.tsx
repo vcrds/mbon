@@ -27,9 +27,9 @@ export default function StructuredData() {
     telephone: "+55-41-XXXX-XXXX",
     email: "contato@ministerioboasnovas.com.br",
     sameAs: [
-      "https://www.facebook.com/ministerioboasnovas",
-      "https://www.instagram.com/ministerioboasnovas",
-      "https://www.youtube.com/@ministerioboasnovas",
+      // "https://www.facebook.com/ministerioboasnovas",
+      "https://www.instagram.com/ministerioMBON",
+      // "https://www.youtube.com/@ministerioboasnovas",
     ],
     openingHours: ["Mo-Su 09:00-18:00"],
     serviceType: [

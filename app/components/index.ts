@@ -8,3 +8,5 @@ export { default as Location } from "./location";
 export { default as Footer } from "./footer";
 export { default as GoogleAnalytics } from "./GoogleAnalytics";
 export { default as StructuredData } from "./StructuredData";
+export { default as SocialMedia } from "./SocialMedia";
+export { default as SocialSection } from "./SocialSection";

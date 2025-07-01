@@ -1,3 +1,5 @@
+import { SocialMedia } from "./index";
+
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
@@ -15,6 +17,14 @@ export default function Footer() {
             <span className="text-[var(--color-primary-300)] text-sm font-medium">
               Ministério Boas Novas
             </span>
+          </div>
+
+          {/* Redes Sociais */}
+          <div className="flex items-center">
+            <SocialMedia
+              size="sm"
+              className="text-[var(--color-primary-400)]"
+            />
           </div>
 
           {/* Copyright */}
