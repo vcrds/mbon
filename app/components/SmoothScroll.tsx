@@ -17,16 +17,18 @@ export default function SmoothScroll({
     const handleScroll = () => {
       const header = document.getElementById("header");
       const schedule = document.getElementById("schedule");
+      const gallery = document.getElementById("gallery");
       const location = document.getElementById("location");
       const footer = document.querySelector("footer");
 
-      if (!header || !schedule || !location) return;
+      if (!header || !schedule || !gallery || !location) return;
 
       const scrollY = window.scrollY;
       const windowHeight = window.innerHeight;
       const documentHeight = document.documentElement.scrollHeight;
       const headerBottom = header.offsetTop + header.offsetHeight;
       const scheduleBottom = schedule.offsetTop + schedule.offsetHeight;
+      const galleryBottom = gallery.offsetTop + gallery.offsetHeight;
 
       // Verifica se está próximo do final da página
       const isNearBottom = scrollY + windowHeight >= documentHeight - 100;
@@ -37,6 +39,8 @@ export default function SmoothScroll({
         setCurrentSection("header");
       } else if (scrollY < scheduleBottom * 0.8) {
         setCurrentSection("schedule");
+      } else if (scrollY < galleryBottom * 0.8) {
+        setCurrentSection("gallery");
       } else {
         setCurrentSection("location");
       }
@@ -106,6 +110,26 @@ export default function SmoothScroll({
                   strokeLinejoin="round"
                   strokeWidth={2}
                   d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                />
+              </svg>
+            </button>
+
+            <button
+              onClick={() => scrollToSection("gallery")}
+              className="w-12 h-12 bg-[var(--color-primary-600)] hover:bg-[var(--color-primary-500)] text-[var(--color-primary-50)] rounded-full shadow-lg transition-all duration-300 hover:scale-110 flex items-center justify-center"
+              title="Ir para galeria"
+            >
+              <svg
+                className="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
                 />
               </svg>
             </button>

@@ -3,6 +3,7 @@
 import HeaderInitial from "./components/header";
 import Schedule from "./components/schedule";
 import Location from "./components/location";
+import Gallery from "./components/gallery";
 import Footer from "./components/footer";
 import SmoothScroll from "./components/SmoothScroll";
 import ScrollProgress from "./components/ScrollProgress";
@@ -23,6 +24,9 @@ export default function Home() {
             <>
               <section id="schedule">
                 <Schedule />
+              </section>
+              <section id="gallery">
+                <Gallery />
               </section>
               <section id="location">
                 <Location />

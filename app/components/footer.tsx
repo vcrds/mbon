@@ -46,6 +46,12 @@ export default function Footer() {
               Programação
             </a>
             <a
+              href="#gallery"
+              className="hover:text-[var(--color-primary-300)] transition-colors duration-200"
+            >
+              Galeria
+            </a>
+            <a
               href="#location"
               className="hover:text-[var(--color-primary-300)] transition-colors duration-200"
             >
