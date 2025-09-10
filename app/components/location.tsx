@@ -3,8 +3,7 @@ import { StaggeredContainer } from "./AnimatedSection";
 
 export default function Location() {
   const handleOpenMaps = () => {
-    const googleMapsUrl =
-      "https://www.google.com/maps/place/Minist%C3%A9rio+Boas+Novas/@-25.3761118,-49.2108714,20.25z/data=!4m15!1m8!3m7!1s0x94dce61981c1b40f:0x460a8d64b1f61a3!2sRua+Arnoldo+Wolff+Gaensly,+471+-+Atuba,+Curitiba+-+PR,+82630-170!3b1!8m2!3d-25.3759817!4d-49.2107483!16s%2Fg%2F11rp3rw_hj!3m5!1s0x94dce77151ed33d5:0x8a09a309cbfe984!8m2!3d-25.3759817!4d-49.2107483!16s%2Fg%2F11p43rcn0x?entry=ttu&g_ep=EgoyMDI1MDYxNy4wIKXMDSoASAFQAw%3D%3D";
+    const googleMapsUrl = "https://maps.app.goo.gl/hepv4UhHXFMcoDZ77";
     window.open(googleMapsUrl, "_blank");
   };
 
@@ -57,11 +56,11 @@ export default function Location() {
                   Endereço
                 </h3>
                 <p className="text-[var(--color-primary-50)] text-sm leading-relaxed">
-                  Rua Arnoldo Wolff Gaensly, 471
+                  Rua Trajano Reis, 700
                   <br />
-                  Atuba, Curitiba - PR,
+                  São Francisco, Curitiba - PR,
                   <br />
-                  CEP: 82630-170
+                  CEP: 80510-220
                 </p>
               </div>
             </div>
