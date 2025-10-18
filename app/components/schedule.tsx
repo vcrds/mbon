@@ -75,7 +75,7 @@ export default function Schedule() {
           <div className="space-y-1.5 sm:space-y-3 flex-1">
             <div className="flex justify-between items-center p-2 gap-1 bg-[var(--color-primary-700)] rounded-lg">
               <span className="text-[var(--color-primary-400)] text-sm font-medium">
-                19:00
+                19:30
               </span>
               <span className="text-[var(--color-primary-50)] text-sm">
                 Encontro das divinas
@@ -83,7 +83,7 @@ export default function Schedule() {
             </div>
             <div className="flex justify-between items-center p-2 gap-1 bg-[var(--color-primary-700)] rounded-lg">
               <span className="text-[var(--color-primary-400)] text-sm font-medium">
-                19:00
+                19:30
               </span>
               <span className="text-[var(--color-primary-50)] text-sm">
                 Taekwondo (infantil)
@@ -92,10 +92,19 @@ export default function Schedule() {
 
             <div className="flex justify-between items-center p-2 bg-[var(--color-primary-700)] rounded-lg">
               <span className="text-[var(--color-primary-400)] text-sm font-medium">
-                20:00
+                20:30
               </span>
               <span className="text-[var(--color-primary-50)] text-sm">
                 Taekwondo (adulto)
+              </span>
+            </div>
+
+            <div className="flex justify-between items-center p-2 bg-[var(--color-primary-700)] rounded-lg">
+              <span className="text-[var(--color-primary-400)] text-sm font-medium">
+                20:30
+              </span>
+              <span className="text-[var(--color-primary-50)] text-sm">
+                Caçadores da verdade
               </span>
             </div>
           </div>
