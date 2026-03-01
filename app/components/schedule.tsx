@@ -67,7 +67,7 @@ export default function Schedule() {
         <div className="bg-gradient-to-br from-[var(--color-primary-800)] to-[var(--color-primary-900)] rounded-xl p-4 sm:p-5 lg:p-6 border border-[var(--color-primary-700)] hover:border-[var(--color-primary-500)] transition-all duration-300 shadow-lg hover-lift w-full h-full flex flex-col">
           <div className="text-center mb-3 sm:mb-6">
             <h2 className="text-[var(--color-primary-100)] text-lg sm:text-xl font-semibold mb-2">
-              Quarta-feira
+              Sexta-feira
             </h2>
             <div className="w-8 h-0.5 bg-[var(--color-primary-400)] mx-auto rounded-full"></div>
           </div>
@@ -99,14 +99,14 @@ export default function Schedule() {
               </span>
             </div>
 
-            <div className="flex justify-between items-center p-2 bg-[var(--color-primary-700)] rounded-lg">
+            {/* <div className="flex justify-between items-center p-2 bg-[var(--color-primary-700)] rounded-lg">
               <span className="text-[var(--color-primary-400)] text-sm font-medium">
                 20:30
               </span>
               <span className="text-[var(--color-primary-50)] text-sm">
                 Caçadores da verdade
               </span>
-            </div>
+            </div> */}
           </div>
         </div>
 

@@ -18,8 +18,8 @@ export default function HeaderInitial({ onLoadComplete }: HeaderInitialProps) {
   const welcomeMessages = [
     "à nossa comunidade de fé",
     "a casa de Deus!",
-    "a sua casa!",
     "à família de Deus!",
+    "a sua casa!",
   ];
 
   // Sequência de carregamento da logo
@@ -76,7 +76,7 @@ export default function HeaderInitial({ onLoadComplete }: HeaderInitialProps) {
 
     const interval = setInterval(() => {
       setCurrentMessageIndex(
-        (prevIndex) => (prevIndex + 1) % welcomeMessages.length
+        (prevIndex) => (prevIndex + 1) % welcomeMessages.length,
       );
     }, 3000);
 
