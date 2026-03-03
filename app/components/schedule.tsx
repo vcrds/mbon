@@ -78,7 +78,7 @@ export default function Schedule() {
                 19:30
               </span>
               <span className="text-[var(--color-primary-50)] text-sm">
-                Encontro das divinas
+                Encontro das escolhidas
               </span>
             </div>
             <div className="flex justify-between items-center p-2 gap-1 bg-[var(--color-primary-700)] rounded-lg">
