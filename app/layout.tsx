@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Montserrat } from "next/font/google";
 import "./globals.css";
 
@@ -6,6 +6,14 @@ const montserrat = Montserrat({
   variable: "--font-montserrat",
   subsets: ["latin"],
 });
+
+export const viewport: Viewport = {
+  themeColor: "#202020",
+  colorScheme: "dark",
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+};
 
 export const metadata: Metadata = {
   title: "Ministério Boas Novas - Igreja em Curitiba",
@@ -81,13 +89,6 @@ export const metadata: Metadata = {
   },
   category: "religion",
   classification: "church",
-  themeColor: "#202020",
-  colorScheme: "dark",
-  viewport: {
-    width: "device-width",
-    initialScale: 1,
-    maximumScale: 1,
-  },
   appleWebApp: {
     title: "MBON",
     statusBarStyle: "black-translucent",
