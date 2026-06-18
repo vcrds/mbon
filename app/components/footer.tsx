@@ -56,6 +56,12 @@ export default function Footer() {
               Programação
             </a>
             <a
+              href="#curso-guerreiros"
+              className="hover:text-[var(--color-primary-300)] transition-colors duration-200"
+            >
+              Curso
+            </a>
+            <a
               href="#gallery"
               className="hover:text-[var(--color-primary-300)] transition-colors duration-200"
             >

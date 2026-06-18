@@ -2,6 +2,7 @@
 
 import HeaderInitial from "./components/header";
 import Schedule from "./components/schedule";
+import WarriorCourse from "./components/warrior-course";
 import Location from "./components/location";
 import Gallery from "./components/gallery";
 import Footer from "./components/footer";
@@ -24,6 +25,9 @@ export default function Home() {
             <>
               <section id="schedule">
                 <Schedule />
+              </section>
+              <section id="curso-guerreiros">
+                <WarriorCourse />
               </section>
               <section id="gallery">
                 <Gallery />
