@@ -1,11 +1,28 @@
 # Configuração das Redes Sociais
 
+## Variáveis de Ambiente
+
+O username do Instagram é configurado via `.env`:
+
+```env
+NEXT_PUBLIC_INSTAGRAM_USERNAME=ministerioMBON
+```
+
+A URL é montada automaticamente como `https://www.instagram.com/{username}`.
+
+A fonte única da configuração é `app/data/socialMedia.ts`. Os componentes abaixo consomem essa config:
+
+- `SocialMedia.tsx`
+- `SocialSection.tsx`
+- `StructuredData.tsx`
+
 ## Status Atual
 
 ### ✅ Instagram (ATIVO)
 
-- **Username**: @ministerioMBON
-- **URL**: https://www.instagram.com/ministerioMBON
+- **Env**: `NEXT_PUBLIC_INSTAGRAM_USERNAME`
+- **Username**: `@` + valor da env (ex.: `@ministerioMBON`)
+- **URL**: `https://www.instagram.com/` + valor da env
 - **Status**: Ativo em todos os componentes
 - **Destaque**: Seção especial no site
 
@@ -32,25 +49,38 @@
 
 ## Arquivos Modificados
 
-### 1. **app/components/SocialMedia.tsx**
+### 1. **app/data/socialMedia.ts**
 
-- ✅ Instagram ativo
+- ✅ Lê `NEXT_PUBLIC_INSTAGRAM_USERNAME`
+- ✅ Monta username (`@...`) e URL do Instagram
 - ~~Facebook, YouTube, WhatsApp comentados~~
 
-### 2. **app/data/socialMedia.ts**
+### 2. **app/components/SocialMedia.tsx**
 
-- ✅ Instagram ativo
+- ✅ Usa `socialMediaConfig.instagram`
 - ~~Facebook, YouTube, WhatsApp comentados~~
 
 ### 3. **app/components/StructuredData.tsx**
 
-- ✅ Instagram ativo nos dados estruturados
+- ✅ Usa `socialMediaConfig.instagram.url` nos dados estruturados
 - ~~Facebook, YouTube comentados~~
 
 ### 4. **app/components/SocialSection.tsx**
 
-- ✅ Título alterado para "Siga-nos no Instagram"
-- ✅ Foco total no Instagram
+- ✅ Título "Siga-nos no Instagram"
+- ✅ Username e URL vindos de `socialMediaConfig.instagram`
+
+## Como Alterar o Instagram
+
+1. Atualize `.env.local` (e `.env.example` se necessário):
+
+```env
+NEXT_PUBLIC_INSTAGRAM_USERNAME=seuUsuario
+```
+
+2. Reinicie o servidor de desenvolvimento.
+
+Não é necessário alterar URLs hardcoded nos componentes.
 
 ## Como Reativar Outras Redes
 
@@ -92,9 +122,9 @@ Para reativar outras redes sociais, basta descomentar as linhas nos arquivos:
 ## Benefícios do Foco no Instagram
 
 1. **Simplicidade**: Interface mais limpa
-2. **Foco**: Destaque total para @ministerioMBON
+2. **Foco**: Destaque total no perfil configurado via env
 3. **Engajamento**: Concentração em uma plataforma
-4. **Manutenção**: Menos configurações para gerenciar
+4. **Manutenção**: Username centralizado em variável de ambiente
 5. **Performance**: Menos ícones e links para carregar
 
 ## Próximos Passos
