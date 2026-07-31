@@ -7,6 +7,7 @@ import Location from "./components/location";
 import Gallery from "./components/gallery";
 import Footer from "./components/footer";
 import SocialSection from "./components/SocialSection";
+// import AboutSection from "./components/AboutSection";
 import SmoothScroll from "./components/SmoothScroll";
 import ScrollProgress from "./components/ScrollProgress";
 import { useState } from "react";
@@ -24,6 +25,11 @@ export default function Home() {
           </section>
           {isHeaderLoaded && (
             <>
+              {/* Seção de apresentação — desabilitada até o vídeo definitivo
+              <section id="about">
+                <AboutSection />
+              </section>
+              */}
               <section id="schedule">
                 <Schedule />
               </section>
