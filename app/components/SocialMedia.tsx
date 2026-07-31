@@ -1,6 +1,7 @@
 "use client";
 
 import { FaInstagram, FaFacebook, FaYoutube, FaWhatsapp } from "react-icons/fa";
+import { socialMediaConfig } from "../data/socialMedia";
 
 interface SocialMediaProps {
   className?: string;
@@ -16,10 +17,10 @@ export default function SocialMedia({
   const socialLinks = [
     {
       name: "Instagram",
-      url: "https://www.instagram.com/ministerioMBON",
+      url: socialMediaConfig.instagram.url,
       icon: FaInstagram,
-      color: "hover:text-pink-500",
-      label: "@ministerioMBON",
+      color: socialMediaConfig.instagram.color,
+      label: socialMediaConfig.instagram.label,
     },
     // {
     //   name: "Facebook",
