@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { SocialMedia } from "./index";
 
 export default function Footer() {
@@ -9,11 +10,13 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
           {/* Logo e Nome */}
           <div className="flex items-center gap-3">
-            <div className="w-8 h-8 bg-[var(--color-primary-500)] rounded-full flex items-center justify-center">
-              <span className="text-[var(--color-primary-50)] text-sm font-bold">
-                M
-              </span>
-            </div>
+            <Image
+              src="/ministerioBoasNovas.svg"
+              width={32}
+              height={32}
+              alt="Logo Ministério Boas Novas"
+              className="w-8 h-8"
+            />
             <span className="text-[var(--color-primary-300)] text-sm font-medium">
               Ministério Boas Novas
             </span>
