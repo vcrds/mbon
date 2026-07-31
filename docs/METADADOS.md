@@ -141,4 +141,4 @@ Atualizar as datas no `sitemap.xml` conforme necessário.
 - ✅ `app/components/SocialSection.tsx` - Seção dedicada para redes sociais
 - ✅ `app/components/footer.tsx` - Footer atualizado com redes sociais
 - ✅ `app/components/index.ts` - Exportações
-- ✅ `METADADOS.md` - Esta documentação
+- ✅ `docs/METADADOS.md` - Esta documentação

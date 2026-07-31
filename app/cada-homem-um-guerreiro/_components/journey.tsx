@@ -1,4 +1,4 @@
-import { journeySteps } from "../data/warrior-course";
+import { journeySteps } from "../../data/warrior-course";
 
 export default function WarriorCourseJourney() {
   return (

@@ -2,10 +2,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Footer from "../components/footer";
 import WarriorCourseBackground from "../components/warrior-course-background";
-import WarriorCourseGallery from "../components/warrior-course-gallery";
-import WarriorCourseJourney from "../components/warrior-course-journey";
-import WarriorCoursePractices from "../components/warrior-course-practices";
-import { BookCard } from "../components/warrior-course";
+import { BookCard } from "./_components/book-card";
+import WarriorCourseGallery from "./_components/gallery";
+import WarriorCourseJourney from "./_components/journey";
+import WarriorCoursePractices from "./_components/practices";
 import {
   audiencePoints,
   books,
@@ -94,9 +94,9 @@ export default function WarriorCoursePage() {
 
         <WarriorCoursePractices />
 
-        <section className="mb-14 sm:mb-16">
+        {/* <section className="mb-14 sm:mb-16">
           <WarriorCourseGallery />
-        </section>
+        </section> */}
 
         <section className="mb-14 sm:mb-16">
           <div className="bg-gradient-to-br from-[var(--color-primary-800)] to-[var(--color-primary-900)] rounded-xl p-6 sm:p-8 border border-[var(--color-primary-700)]">

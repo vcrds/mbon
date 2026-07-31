@@ -1,4 +1,4 @@
-import { methodology, methodologyPractices } from "../data/warrior-course";
+import { methodology, methodologyPractices } from "../../data/warrior-course";
 
 const practiceIcons = [
   (

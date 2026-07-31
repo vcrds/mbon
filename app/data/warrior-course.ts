@@ -117,8 +117,10 @@ export const scheduleHint = {
   time: "20:00",
 };
 
-export const whatsappNumber = "5541999858852";
-export const whatsappDisplay = "(41) 99985-8852";
+export const whatsappNumber =
+  process.env.NEXT_PUBLIC_WARRIOR_COURSE_WHATSAPP_NUMBER ?? "";
+export const whatsappDisplay =
+  process.env.NEXT_PUBLIC_WARRIOR_COURSE_WHATSAPP_DISPLAY ?? "";
 
 export const books: WarriorBook[] = [
   {
