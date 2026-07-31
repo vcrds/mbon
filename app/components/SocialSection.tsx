@@ -1,51 +1,36 @@
 "use client";
 
-import { SocialMedia } from "./index";
+import AnimatedSection from "./AnimatedSection";
+import { socialMediaConfig } from "../data/socialMedia";
 
 export default function SocialSection() {
+  const { username, url } = socialMediaConfig.instagram;
+
   return (
-    <section className="py-12 bg-gradient-to-b from-[var(--color-primary-900)] to-[var(--color-primary-950)]">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 md:px-8 text-center">
-        <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-primary-100)] mb-4">
-          Siga-nos no Instagram
-        </h2>
-        <p className="text-[var(--color-primary-300)] text-lg mb-8 max-w-2xl mx-auto">
-          Fique por dentro das novidades, eventos e mensagens inspiradoras do
-          Ministério Boas Novas
-        </p>
-
-        <div className="flex flex-col items-center gap-6">
-          {/* Redes Sociais */}
-          <SocialMedia
-            size="lg"
-            showLabels={true}
-            className="text-[var(--color-primary-200)]"
-          />
-
-          {/* Destaque do Instagram */}
-          <div className="mt-8 p-6 bg-[var(--color-primary-800)] rounded-lg border border-[var(--color-primary-700)]">
-            <h3 className="text-xl font-semibold text-[var(--color-primary-100)] mb-2">
-              📱 Instagram @ministerioMBON
-            </h3>
-            <p className="text-[var(--color-primary-300)] mb-4">
-              Acompanhe nosso dia a dia, momentos especiais e mensagens de fé
-            </p>
-            <a
-              href="https://www.instagram.com/ministerioMBON"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-gradient-to-r from-pink-500 to-purple-600 text-white px-6 py-3 rounded-full font-medium hover:from-pink-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105"
-            >
-              <span>📸 Seguir no Instagram</span>
-            </a>
-          </div>
-
-          {/* Call to Action */}
-          <div className="mt-6 text-[var(--color-primary-400)] text-sm">
-            <p>Compartilhe com amigos e familiares! 🙏</p>
-          </div>
+    <div className="w-full flex flex-col items-center justify-center px-4 sm:px-6 md:px-8 py-16">
+      <AnimatedSection animation="fadeInDown" delay={0.1}>
+        <div className="text-center mb-8 sm:mb-12">
+          <h2 className="text-[var(--color-primary-50)] text-3xl sm:text-4xl md:text-5xl font-bold mb-3">
+            Siga-nos no Instagram
+          </h2>
+          <p className="text-[var(--color-primary-300)] text-base sm:text-lg mb-4 max-w-2xl mx-auto">
+            Fique por dentro das novidades, eventos e mensagens inspiradoras do
+            Ministério Boas Novas
+          </p>
+          <div className="w-16 h-0.5 bg-[var(--color-primary-500)] mx-auto rounded-full" />
         </div>
-      </div>
-    </section>
+      </AnimatedSection>
+
+      <AnimatedSection animation="fadeInUp" delay={0.2}>
+        <a
+          href={url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center justify-center px-8 py-3 rounded-full text-sm font-medium bg-[var(--color-primary-500)] text-[var(--color-primary-50)] hover:bg-[var(--color-primary-400)] transition-all duration-300 hover:scale-105 shadow-lg"
+        >
+          Seguir {username}
+        </a>
+      </AnimatedSection>
+    </div>
   );
 }

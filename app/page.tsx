@@ -6,6 +6,7 @@ import WarriorCourse from "./components/warrior-course";
 import Location from "./components/location";
 import Gallery from "./components/gallery";
 import Footer from "./components/footer";
+import SocialSection from "./components/SocialSection";
 import SmoothScroll from "./components/SmoothScroll";
 import ScrollProgress from "./components/ScrollProgress";
 import { useState } from "react";
@@ -34,6 +35,9 @@ export default function Home() {
               </section>
               <section id="location">
                 <Location />
+              </section>
+              <section id="social">
+                <SocialSection />
               </section>
               <Footer />
             </>
