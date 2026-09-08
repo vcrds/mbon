@@ -87,7 +87,7 @@ Substituir os placeholders nos dados estruturados:
 
 - Telefone: `+55-41-XXXX-XXXX`
 - Email: `contato@ministerioboasnovas.com.br`
-- Instagram: `@ministerioMBON` ✅ (ativo)
+- Instagram: configurar `NEXT_PUBLIC_INSTAGRAM_USERNAME` no `.env` ✅ (ativo via `socialMediaConfig`)
 - ~~Facebook~~: `ministerioboasnovas` (comentado)
 - ~~YouTube~~: `@ministerioboasnovas` (comentado)
 
@@ -141,4 +141,4 @@ Atualizar as datas no `sitemap.xml` conforme necessário.
 - ✅ `app/components/SocialSection.tsx` - Seção dedicada para redes sociais
 - ✅ `app/components/footer.tsx` - Footer atualizado com redes sociais
 - ✅ `app/components/index.ts` - Exportações
-- ✅ `METADADOS.md` - Esta documentação
+- ✅ `docs/METADADOS.md` - Esta documentação

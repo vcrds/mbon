@@ -10,3 +10,4 @@ export { default as GoogleAnalytics } from "./GoogleAnalytics";
 export { default as StructuredData } from "./StructuredData";
 export { default as SocialMedia } from "./SocialMedia";
 export { default as SocialSection } from "./SocialSection";
+export { default as AboutSection } from "./AboutSection";

@@ -1,6 +1,7 @@
 "use client";
 
 import Script from "next/script";
+import { socialMediaConfig } from "../data/socialMedia";
 
 export default function StructuredData() {
   const structuredData = {
@@ -28,7 +29,7 @@ export default function StructuredData() {
     email: "contato@ministerioboasnovas.com.br",
     sameAs: [
       // "https://www.facebook.com/ministerioboasnovas",
-      "https://www.instagram.com/ministerioMBON",
+      socialMediaConfig.instagram.url,
       // "https://www.youtube.com/@ministerioboasnovas",
     ],
     openingHours: ["Mo-Su 09:00-18:00"],

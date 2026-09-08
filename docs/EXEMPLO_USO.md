@@ -112,12 +112,18 @@ export default function MeuComponente() {
 
 1. Atualizar informações de contato no `StructuredData.tsx`
 2. Verificar coordenadas geográficas
-3. Atualizar URLs das redes sociais
+3. Configurar `NEXT_PUBLIC_INSTAGRAM_USERNAME` no `.env` (a URL do Instagram é montada automaticamente)
 4. Configurar horários de funcionamento
 
 ### Redes Sociais
 
-- ✅ **Instagram**: @ministerioMBON (ativo)
+Configure o Instagram via `.env`:
+
+```env
+NEXT_PUBLIC_INSTAGRAM_USERNAME=ministerioMBON
+```
+
+- ✅ **Instagram**: ativo — username via `NEXT_PUBLIC_INSTAGRAM_USERNAME` (fonte: `app/data/socialMedia.ts`)
 - ~~Facebook~~: ministerioboasnovas (comentado)
 - ~~YouTube~~: @ministerioboasnovas (comentado)
 - ~~WhatsApp~~: (41) 99999-9999 (comentado)
@@ -129,4 +135,4 @@ export default function MeuComponente() {
 - **SEO Local**: Melhor posicionamento para buscas em Curitiba
 - **Credibilidade**: Informações estruturadas para motores de busca
 - **Engajamento**: Redes sociais integradas para maior interação
-- **Instagram**: Destaque especial para @ministerioMBON
+- **Instagram**: Destaque especial, configurável por variável de ambiente

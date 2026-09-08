@@ -36,6 +36,8 @@ scripts/
 
 ## 🛠️ Como Adicionar Imagens
 
+Fotos novas entram direto em `public/images/gallery/...` (via script ou manualmente). Não versionar pasta de staging no repositório — ajuste as imagens fora do projeto e só então publique na galeria.
+
 ### Método 1: Script Automatizado (Recomendado)
 
 1. **Execute o script:**

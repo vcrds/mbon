@@ -1,9 +1,13 @@
+const instagramUsername = (
+  process.env.NEXT_PUBLIC_INSTAGRAM_USERNAME ?? "instagram"
+).replace(/^@/, "");
+
 export const socialMediaConfig = {
   instagram: {
-    username: "@ministerioMBON",
-    url: "https://www.instagram.com/ministerioMBON",
+    username: `@${instagramUsername}`,
+    url: `https://www.instagram.com/${instagramUsername}`,
     color: "hover:text-pink-500",
-    label: "@ministerioMBON",
+    label: `@${instagramUsername}`,
   },
   // facebook: {
   //   username: "ministerioboasnovas",
