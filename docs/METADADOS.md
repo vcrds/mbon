@@ -36,8 +36,8 @@
 
 ### URLs e Domínios
 
-- **URL Base**: `https://ministerioboasnovas.com.br`
-- **Sitemap**: `https://ministerioboasnovas.com.br/sitemap.xml`
+- **URL Base**: `https://ministerioboasnovas.com`
+- **Sitemap**: `https://ministerioboasnovas.com/sitemap.xml`
 
 ### Localização
 

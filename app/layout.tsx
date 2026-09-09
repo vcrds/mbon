@@ -43,14 +43,14 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL("https://ministerioboasnovas.com.br"),
+  metadataBase: new URL("https://ministerioboasnovas.com"),
   alternates: {
     canonical: "/",
   },
   openGraph: {
     type: "website",
     locale: "pt_BR",
-    url: "https://ministerioboasnovas.com.br",
+    url: "https://ministerioboasnovas.com",
     title: "Ministério Boas Novas - Igreja em Curitiba",
     description:
       "Ministério Boas Novas em Curitiba - Uma igreja cristã comprometida em compartilhar o amor de Deus e as boas novas do evangelho.",

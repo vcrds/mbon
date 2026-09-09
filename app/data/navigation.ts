@@ -1,4 +1,4 @@
-export const siteUrl = "https://ministerioboasnovas.com.br";
+export const siteUrl = "https://ministerioboasnovas.com";
 
 export const navLinks = [
   { href: "/", label: "Início" },
