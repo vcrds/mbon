@@ -1,15 +1,21 @@
 import AnimatedSection from "./AnimatedSection";
 import { StaggeredContainer } from "./AnimatedSection";
 
-export default function Schedule() {
+interface ScheduleProps {
+  headingLevel?: "h1" | "h2";
+}
+
+export default function Schedule({ headingLevel = "h1" }: ScheduleProps) {
+  const Heading = headingLevel;
+
   return (
     <div className="min-h-[500px] lg:min-h-screen w-full flex flex-col items-center justify-center px-4 sm:px-6 md:px-8 py-16">
       {/* Título Principal */}
       <AnimatedSection animation="fadeInDown" delay={0.1}>
         <div className="text-center mb-16">
-          <h1 className="text-[var(--color-primary-50)] text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
+          <Heading className="text-[var(--color-primary-50)] text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
             Programação Semanal
-          </h1>
+          </Heading>
           <div className="w-16 h-0.5 bg-[var(--color-primary-500)] mx-auto rounded-full"></div>
         </div>
       </AnimatedSection>

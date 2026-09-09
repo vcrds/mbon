@@ -31,7 +31,7 @@ export default function Home() {
               </section>
               */}
               <section id="schedule">
-                <Schedule />
+                <Schedule headingLevel="h2" />
               </section>
               <section id="curso-guerreiros">
                 <WarriorCourse />
@@ -40,7 +40,7 @@ export default function Home() {
                 <Gallery />
               </section>
               <section id="location">
-                <Location />
+                <Location headingLevel="h2" />
               </section>
               <section id="social">
                 <SocialSection />
