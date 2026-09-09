@@ -18,6 +18,7 @@ import {
   warriorCourseTitle,
   whatsappNumber,
 } from "../data/warrior-course";
+import { siteUrl } from "../data/navigation";
 
 export const metadata: Metadata = {
   title: "Cada Homem Um Guerreiro | Ministério Boas Novas",
@@ -30,7 +31,7 @@ export const metadata: Metadata = {
     title: "Cada Homem Um Guerreiro | Ministério Boas Novas",
     description:
       "Jornada de discipulado e transformação para homens. Estudo em grupo no Ministério Boas Novas.",
-    url: "https://ministerioboasnovas.com.br/cada-homem-um-guerreiro",
+    url: `${siteUrl}/cada-homem-um-guerreiro`,
   },
 };
 

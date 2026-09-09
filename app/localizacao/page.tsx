@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import PageShell from "../components/page-shell";
 import Location from "../components/location";
+import { siteUrl } from "../data/navigation";
 
 export const metadata: Metadata = {
   title: "Localização | Ministério Boas Novas",
@@ -13,7 +14,7 @@ export const metadata: Metadata = {
     title: "Localização | Ministério Boas Novas",
     description:
       "Endereço e mapa do Ministério Boas Novas em Curitiba: Rua Trajano Reis, 700.",
-    url: "https://ministerioboasnovas.com.br/localizacao",
+    url: `${siteUrl}/localizacao`,
   },
 };
 

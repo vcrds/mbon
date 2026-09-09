@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import PageShell from "../components/page-shell";
 import Schedule from "../components/schedule";
+import { siteUrl } from "../data/navigation";
 
 export const metadata: Metadata = {
   title: "Agenda | Ministério Boas Novas",
@@ -13,7 +14,7 @@ export const metadata: Metadata = {
     title: "Agenda | Ministério Boas Novas",
     description:
       "Programação semanal da igreja Ministério Boas Novas em Curitiba.",
-    url: "https://ministerioboasnovas.com.br/agenda",
+    url: `${siteUrl}/agenda`,
   },
 };
 

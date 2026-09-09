@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import PageShell from "../components/page-shell";
+import { siteUrl } from "../data/navigation";
 import { contactInfo, socialMediaConfig } from "../data/socialMedia";
 
 export const metadata: Metadata = {
@@ -14,7 +15,7 @@ export const metadata: Metadata = {
     title: "Contato | Ministério Boas Novas",
     description:
       "WhatsApp, Instagram e endereço do Ministério Boas Novas em Curitiba.",
-    url: "https://ministerioboasnovas.com.br/contato",
+    url: `${siteUrl}/contato`,
   },
 };
 
