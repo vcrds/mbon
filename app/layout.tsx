@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Montserrat } from "next/font/google";
+import StructuredData from "./components/StructuredData";
 import "./globals.css";
 
 const montserrat = Montserrat({
@@ -156,7 +157,10 @@ export default function RootLayout({
           crossOrigin="anonymous"
         />
       </head>
-      <body className={`${montserrat.variable} antialiased`}>{children}</body>
+      <body className={`${montserrat.variable} antialiased`}>
+        <StructuredData />
+        {children}
+      </body>
     </html>
   );
 }
