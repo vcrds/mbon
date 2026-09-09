@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { SocialMedia } from "./index";
 
 export default function Footer() {
@@ -45,37 +46,43 @@ export default function Footer() {
 
         {/* Links rápidos */}
         <div className="flex justify-center mt-4">
-          <div className="flex gap-6 text-[var(--color-primary-400)] text-xs">
-            <a
-              href="#header"
+          <div className="flex flex-wrap justify-center gap-6 text-[var(--color-primary-400)] text-xs">
+            <Link
+              href="/"
               className="hover:text-[var(--color-primary-300)] transition-colors duration-200"
             >
               Início
-            </a>
-            <a
-              href="#schedule"
+            </Link>
+            <Link
+              href="/agenda"
               className="hover:text-[var(--color-primary-300)] transition-colors duration-200"
             >
-              Programação
-            </a>
-            <a
-              href="#curso-guerreiros"
+              Agenda
+            </Link>
+            <Link
+              href="/cada-homem-um-guerreiro"
               className="hover:text-[var(--color-primary-300)] transition-colors duration-200"
             >
               Curso
-            </a>
-            <a
-              href="#gallery"
+            </Link>
+            <Link
+              href="/#gallery"
               className="hover:text-[var(--color-primary-300)] transition-colors duration-200"
             >
               Galeria
-            </a>
-            <a
-              href="#location"
+            </Link>
+            <Link
+              href="/localizacao"
               className="hover:text-[var(--color-primary-300)] transition-colors duration-200"
             >
               Localização
-            </a>
+            </Link>
+            <Link
+              href="/contato"
+              className="hover:text-[var(--color-primary-300)] transition-colors duration-200"
+            >
+              Contato
+            </Link>
           </div>
         </div>
       </div>

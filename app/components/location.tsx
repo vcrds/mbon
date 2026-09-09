@@ -1,20 +1,28 @@
+"use client";
+
 import AnimatedSection from "./AnimatedSection";
 import { StaggeredContainer } from "./AnimatedSection";
+import { contactInfo } from "../data/socialMedia";
 
-export default function Location() {
+interface LocationProps {
+  headingLevel?: "h1" | "h2";
+}
+
+export default function Location({ headingLevel = "h1" }: LocationProps) {
   const handleOpenMaps = () => {
-    const googleMapsUrl = "https://maps.app.goo.gl/hepv4UhHXFMcoDZ77";
-    window.open(googleMapsUrl, "_blank");
+    window.open(contactInfo.mapsUrl, "_blank");
   };
+
+  const Heading = headingLevel;
 
   return (
     <div className="min-h-[500px] w-full flex flex-col items-center justify-center px-4 sm:px-6 md:px-8 py-16">
       {/* Título Principal */}
       <AnimatedSection animation="fadeInDown" delay={0.1}>
         <div className="text-center mb-16">
-          <h1 className="text-[var(--color-primary-50)] text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
+          <Heading className="text-[var(--color-primary-50)] text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
             Nossa Localização
-          </h1>
+          </Heading>
           <div className="w-16 h-0.5 bg-[var(--color-primary-500)] mx-auto rounded-full"></div>
         </div>
       </AnimatedSection>
@@ -56,11 +64,12 @@ export default function Location() {
                   Endereço
                 </h3>
                 <p className="text-[var(--color-primary-50)] text-sm leading-relaxed">
-                  Rua Trajano Reis, 700
+                  {contactInfo.address.street}
                   <br />
-                  São Francisco, Curitiba - PR,
+                  {contactInfo.address.neighborhood}, {contactInfo.address.city}{" "}
+                  - {contactInfo.address.state},
                   <br />
-                  CEP: 80510-220
+                  CEP: {contactInfo.address.postalCode}
                 </p>
               </div>
             </div>
@@ -103,7 +112,7 @@ export default function Location() {
                   WhatsApp
                 </h3>
                 <p className="text-[var(--color-primary-50)] text-sm">
-                  (41) 99985-8852
+                  {contactInfo.whatsappDisplay}
                 </p>
               </div>
             </div>

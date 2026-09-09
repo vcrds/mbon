@@ -6,6 +6,7 @@ export { default as HeaderInitial } from "./header";
 export { default as Schedule } from "./schedule";
 export { default as Location } from "./location";
 export { default as Footer } from "./footer";
+export { default as PageShell } from "./page-shell";
 export { default as GoogleAnalytics } from "./GoogleAnalytics";
 export { default as StructuredData } from "./StructuredData";
 export { default as SocialMedia } from "./SocialMedia";

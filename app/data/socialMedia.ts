@@ -30,11 +30,17 @@ export const socialMediaConfig = {
 };
 
 export const contactInfo = {
-  phone: "+55-41-XXXX-XXXX",
-  email: "contato@ministerioboasnovas.com.br",
+  whatsappNumber:
+    process.env.NEXT_PUBLIC_WARRIOR_COURSE_WHATSAPP_NUMBER ?? "5541999858852",
+  whatsappDisplay:
+    process.env.NEXT_PUBLIC_WARRIOR_COURSE_WHATSAPP_DISPLAY ?? "(41) 99985-8852",
+  mapsUrl: "https://maps.app.goo.gl/hepv4UhHXFMcoDZ77",
   address: {
+    street: "Rua Trajano Reis, 700",
+    neighborhood: "São Francisco",
     city: "Curitiba",
     state: "PR",
+    postalCode: "80510-220",
     country: "BR",
   },
   coordinates: {
