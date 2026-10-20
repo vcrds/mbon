@@ -1,36 +1,89 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<p align="center">
+  <video src="./docs/mbn.mp4" width="720" autoplay loop muted playsinline controls>
+    Prévia do site do Ministério Boas Novas
+  </video>
+</p>
 
-## Getting Started
+<h1 align="center">Ministério Boas Novas</h1>
 
-First, run the development server:
+<p align="center">
+  Site institucional da igreja em Curitiba — programação, discipulado, galeria e como chegar.
+</p>
+
+<p align="center">
+  <a href="https://ministerioboasnovas.com.br">ministerioboasnovas.com.br</a>
+</p>
+
+O Ministério Boas Novas é uma igreja cristã em Curitiba. Este repositório é o site público: uma página única com a programação da semana, o curso **Cada Homem Um Guerreiro**, a galeria de fotos, a localização e as redes sociais. Também há uma página dedicada ao curso de discipulado para homens.
+
+## O que o site apresenta
+
+- **Início** — abertura com a identidade da igreja
+- **Programação semanal** — horários dos encontros
+- **Cada Homem Um Guerreiro** — apresentação da série EMAW e página em [`/cada-homem-um-guerreiro`](app/cada-homem-um-guerreiro/page.tsx), com os livros, a jornada e contato por WhatsApp
+- **Galeria** — fotos de eventos, atividades e do espaço
+- **Localização** — endereço e link para o mapa
+- **Redes sociais** — Instagram configurado por variável de ambiente
+
+O visual é escuro, com tipografia Montserrat, e o site funciona como PWA (instalável no celular).
+
+## Stack
+
+- [Next.js](https://nextjs.org) 16 (App Router) e React 19
+- TypeScript
+- Tailwind CSS 4
+- [react-icons](https://react-icons.github.io/react-icons/)
+
+## Como rodar
+
+Requisitos: Node.js e npm.
 
 ```bash
+npm install
+cp .env.example .env.local
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abra [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+| Comando | O que faz |
+| --- | --- |
+| `npm run dev` | Servidor de desenvolvimento (Turbopack) |
+| `npm run build` | Build de produção |
+| `npm run start` | Sobe o build localmente |
+| `npm run lint` | ESLint |
+| `npm run add-image` | Adiciona uma foto na galeria (`scripts/add-gallery-image.js`) |
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Variáveis de ambiente
 
-## Learn More
+Copie `.env.example` para `.env.local`. As variáveis são públicas (`NEXT_PUBLIC_*`) e entram no bundle do cliente.
 
-To learn more about Next.js, take a look at the following resources:
+| Variável | Uso |
+| --- | --- |
+| `NEXT_PUBLIC_INSTAGRAM_USERNAME` | Usuário do Instagram (sem `@`) |
+| `NEXT_PUBLIC_WARRIOR_COURSE_WHATSAPP_NUMBER` | Número do WhatsApp do curso, só dígitos, com DDI |
+| `NEXT_PUBLIC_WARRIOR_COURSE_WHATSAPP_DISPLAY` | Número formatado para exibição |
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Estrutura
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```
+app/
+├── page.tsx                         # Página inicial
+├── cada-homem-um-guerreiro/         # Página do curso
+├── components/                      # Seções e UI compartilhada
+└── data/                            # Textos, galeria e redes sociais
+public/
+├── images/gallery/                  # Fotos publicadas
+└── videos/                          # Vídeos das seções
+docs/                                # Notas de galeria, metadados e redes
+scripts/add-gallery-image.js         # Inclusão de imagens na galeria
+```
 
-## Deploy on Vercel
+Conteúdo editável (textos do curso, lista da galeria, redes) fica em `app/data/`. Fotos novas entram em `public/images/gallery/`; o passo a passo está em [`docs/GALERIA.md`](docs/GALERIA.md).
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Documentação interna
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- [`docs/GALERIA.md`](docs/GALERIA.md) — como adicionar e organizar fotos
+- [`docs/REDES_SOCIAIS.md`](docs/REDES_SOCIAIS.md) — Instagram e demais redes
+- [`docs/METADADOS.md`](docs/METADADOS.md) — SEO, Open Graph e PWA
+- [`docs/EXEMPLO_USO.md`](docs/EXEMPLO_USO.md) — Analytics e dados estruturados
