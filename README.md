@@ -1,7 +1,5 @@
 <p align="center">
-  <video src="./docs/mbn.mp4" width="720" autoplay loop muted playsinline controls>
-    Prévia do site do Ministério Boas Novas
-  </video>
+  <img src="./docs/mbn.gif" width="720" alt="Prévia do site do Ministério Boas Novas">
 </p>
 
 <h1 align="center">Ministério Boas Novas</h1>
